@@ -1,18 +1,18 @@
 settings:
   title: 'STATUS PIRATE SITE'
-  url: 'https://dupa.piratefilms.workers.dev' # used for Slack messages
+  url: 'https://status.piratesite.net/' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
+  allmonitorsOperational: 'Wszystkie systemy sprawne'
+  notAllmonitorsOperational: 'Nie wszystkie systemy są sprawne'
   monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  monitorLabelNotOperational: 'Nieczynne'
+  monitorLabelNoData: 'Brak danych'
+  dayInHistogramNoData: 'Brak danych'
+  dayInHistogramOperational: 'Wszystko dobrze'
+  dayInHistogramNotOperational: ' zdarzenie(-a)' # xx incident(s) recorded
 
 monitors:
   - id: piratesite-net # unique identifier
@@ -22,5 +22,5 @@ monitors:
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
