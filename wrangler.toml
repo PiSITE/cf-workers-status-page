@@ -1,4 +1,4 @@
-name = "ps-stat"
+name = "cf-workers-status-page"
 workers_dev = false
 account_id = ""
 type = "webpack"
